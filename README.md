@@ -1,6 +1,6 @@
 APP-PS
 ======
-Yo
+
 Le secret c'est : 
 
 Dans un terminal 
