@@ -1,0 +1,46 @@
+\section{Exercice 1 }
+
+\subsection{Méthode des moments}
+
+\subsubsection{Echantillon}
+cf. code \texttt{Matlab}
+
+\subsubsection{Estimateur}
+
+On cherche à déterminer un estimateur 
+
+Vu la forme de la loi de densité 
+$$f(x) = \frac{k}{c} (\frac{x}{c})^{k-1} \exp[(\frac{x}{c})^{k}]$$
+
+on sait qu'il s'agit d'une distribution de Weibull et que donc : 
+
+$$ \mu'_1 = E(x) = c \Gamma(1+\frac{1}{k})$$
+
+De plus, par définition, 
+
+$$V(x) = E(x^2) - (E(x))^2$$
+
+Or pour une Weibull, on a que 
+
+$$V(x) = c^2 [\Gamma(1+\frac{2}{k}) - (\Gamma(1+\frac{1}{k}))^2]$$.
+
+On déduit donc aisément que 
+
+$$ \mu'_2 = E(x^2) = c^2 \Gamma(1+\frac{2}{k})  $$
+
+De là on tire que : 
+
+$$\frac{\mu'_1}{\Gamma(1+\frac{1}{k})} = c $$
+$$\frac{\mu'_2}{\mu_{1}^{'2}} = \frac{\Gamma(1+\frac{2}{k})}{(\Gamma(1+\frac{1}{k}))^2}$$
+
+Ce qui donne, par propriété de la fonction $\Gamma$ : 
+$$\frac{\mu'_2}{\mu_{1}^{'2}} = \frac{2 k \Gamma(\frac{2}{k})}{(\Gamma(\frac{1}{k}))^2}$$ 
+
+Ensuite on égalise nos $\mu$ et $\hat{\mu}$
+
+$$\frac{\hat{\mu}'_2}{\hat{\mu}_{1}^{'2}} = \frac{2 k \Gamma(\frac{2}{k})}{(\Gamma(\frac{1}{k}))^2}$$ 
+$$\frac{ n \sum_i^n X_i^2}{(\sum_i^{n} X_i)^2} = \frac{2 k \Gamma(\frac{2}{k})}{(\Gamma(\frac{1}{k}))^2}$$ 
+
+On procède ensuite par itération pour trouver la valeur idéale de $k$ et à partir de laquelle on peut déduire $c$
+
+On obtient des valeurs de k et c. 
